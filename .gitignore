@@ -1,45 +1,71 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
+# ===============================
+# Flutter / Dart
+# ===============================
 .dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
+.packages
 .pub/
-/build/
-/coverage/
+.pub-cache/
+build/
+coverage/
+.flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
+flutter_*.png
 
-# Symbolication related
-app.*.symbols
+# Keep pubspec.lock for apps
+# (Do NOT ignore it)
 
-# Obfuscation related
-app.*.map.json
+# ===============================
+# Environment files
+# ===============================
+.env
+.env.*
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# ===============================
+# IDE / Editors
+# ===============================
+.idea/
+*.iml
+.vscode/
+
+# ===============================
+# macOS
+# ===============================
+.DS_Store
+
+# ===============================
+# Windows
+# ===============================
+Thumbs.db
+
+# ===============================
+# Linux
+# ===============================
+*~
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Android
+# ===============================
+android/.gradle/
+android/local.properties
+android/app/debug
+android/app/profile
+android/app/release
+
+# ===============================
+# iOS / macOS
+# ===============================
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+macos/Pods/
+
+# ===============================
+# Web
+# ===============================
+web/.dart_tool/
