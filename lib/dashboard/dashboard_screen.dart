@@ -27,11 +27,11 @@ class DashboardScreen extends ConsumerWidget {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: () async {
-              await Supabase.instance.client.auth.signOut();
-            },
-          ),
+  icon: const Icon(Icons.logout),
+  onPressed: () async {
+    await Supabase.instance.client.auth.signOut();
+  },
+),
         ],
       ),
       body: taskState.when(

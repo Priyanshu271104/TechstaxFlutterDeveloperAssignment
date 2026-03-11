@@ -22,7 +22,6 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = Supabase.instance.client.auth.currentUser;
     final themeMode = ref.watch(themeProvider);
 
     return MaterialApp(
@@ -30,7 +29,28 @@ class MyApp extends ConsumerWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,
-      home: user == null ? const LoginScreen() : DashboardScreen(),
+      home: const AuthWrapper(),
+    );
+  }
+  
+}
+class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<AuthState>(
+      stream: Supabase.instance.client.auth.onAuthStateChange,
+      builder: (context, snapshot) {
+        final session =
+            Supabase.instance.client.auth.currentSession;
+
+        if (session == null) {
+          return const LoginScreen();
+        } else {
+          return DashboardScreen();
+        }
+      },
     );
   }
 }
