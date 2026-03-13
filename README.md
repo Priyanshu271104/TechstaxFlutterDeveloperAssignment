@@ -130,11 +130,6 @@ flutter test
 
 ---
 
-## ⏱ Development Time
-
-Completed in approximately **14–15 hours** within the given 3-day timeline.
-
----
 
 ## 🏁 Bonus Implemented
 
@@ -143,12 +138,3 @@ Completed in approximately **14–15 hours** within the given 3-day timeline.
 - ✅ Theme Toggle
 - ✅ Pull-to-Refresh
 - ✅ Smooth Animations
-
----
-
-## 📌 Final Notes
-
-- Clean modular architecture
-- Secure Supabase integration with RLS
-- Reactive UI using Riverpod
-- Production-style animations and theming
